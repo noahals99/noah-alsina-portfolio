@@ -1,0 +1,84 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#begin-button-container{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.begin-button{
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  height: 40px;
+  width: 150px;
+  border: solid 0.5px rgba(255, 255, 255, 0.166);
+  display: flex;
+  transition: 1s;
+  opacity: 0;
+}
+
+
+#initial-black-screen{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background-color: black;
+  transition: 5s;
+}
+
+#begin-button:hover{
+  transition: 500ms;
+  border: solid 0.5px rgba(255, 255, 255, 0.492);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+#canvas-container{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content-display-outer-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+#content-display-container{
+  height: 95vh;
+  width: 45vw;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
