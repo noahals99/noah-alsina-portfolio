@@ -1,8 +1,19 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(/font/Montserrat-VariableFont_wght.ttf);
+}
+
 #root {
   max-width: 1280px;
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+
+#display-container{
+  height: 100vh;
+  width: 100vw;
 }
 
 #begin-button-container{
@@ -14,22 +25,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 50;
 }
 
 .begin-button{
-  margin-top: 200px;
+  margin-top: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
   color: white;
+  border-radius: 10px;
   height: 40px;
   width: 150px;
-  border: solid 0.5px rgba(255, 255, 255, 0.166);
+  border: solid 0.5px rgba(255, 255, 255, 0.227);
   display: flex;
   transition: 1s;
   opacity: 0;
+  padding: 10px;
 }
+
+.begin-button:hover{
+  border: solid 0.5px rgb(255, 255, 255);
+}
+
+
 
 
 #initial-black-screen{
@@ -41,11 +61,8 @@
   z-index: 100;
   background-color: black;
   transition: 5s;
-}
-
-#begin-button:hover{
-  transition: 500ms;
-  border: solid 0.5px rgba(255, 255, 255, 0.492);
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -63,22 +80,159 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
 }
 
 #content-display-outer-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
+  display: none;
   width: 100vw;
+  height: 100vw;
+  justify-content: center;
+  overflow: auto;
 }
 
+#logo-container{
+  margin-top: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  min-width: 300px;
+  min-height: 500px;
+  height: 500px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.icon-title{
+  padding-top: 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.logo-card{
+  border: solid white 0.75px;
+  padding: 5px;
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
+}
+
+
 #content-display-container{
-  height: 95vh;
-  width: 45vw;
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
+  height: 95%;
+  width: 40%;
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  min-width: 600px;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.logo{
+  height: 60px;
+  width: 60px;
+}
+
+.section-title{
+  font-size: 3rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#about-section{
+  margin-top: 58px;
+  display: flex;
+  flex-direction: column;
+  width: 80%
+}
+
+#about-text{
+  padding-top: 30px;
+  font-size: 0.9rem;
+}
+
+#intro-container{
+  top: 0px;
+  transition: 1s;
+  position: fixed;
+  padding-top: 33vh;
+  height: 60%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 20;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#intro-description{
+  color: white;
+  font-size: 2rem;
+}
+
+#intro-name{
+  color: white;
+  font-size: 2rem;
+}
+
+#name-highlight{
+  color: red;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+  font-family: "montserrat";
+}
+
+#header{
+  color: white;
+}
+
+
+html {
+  padding-top: env(safe-area-inset-top);
+}
+  
+body{
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+@supports (-webkit-touch-callout: none) {
+  #display-container{
+    height: 90vh;
+  }
+
+  #begin-button-container{
+    height: 90vh;
+  }
+
+  #initial-black-screen{
+    height: 90vh;
+  }
+
+  #canvas-container{
+    height: 90vh;
+  }
+
+  #content-display-outer-container{
+    height: 90vw;
+  }
+
+  #intro-container{
+    padding-top: 28vh;
+  }
+
+  #about-section{
+    width: 60%
+  }
 }
