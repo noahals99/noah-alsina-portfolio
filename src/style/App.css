@@ -247,6 +247,13 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 0.5s;
+}
+
+.nav-item-conatiner:hover{
+  color: rgba(253, 253, 253, 0.745);
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 #project-card-conatiner{
@@ -291,6 +298,83 @@ body{
 .project-gh-link-icon:hover{
   filter:drop-shadow(0px 0px 4px #ffffff91);
   transition: 0.5s;
+}
+
+#contact-section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+#contact-form{
+  margin-top: 40px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#email-input{
+  padding: 5px;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+  border: solid white 0.75px;
+  border-radius: 5px;
+  font-family: "montserrat";
+}
+
+#message-input{
+  padding: 5px;
+  width: 100%;
+  font-family: "montserrat";
+  color: white;
+  background-color: transparent;
+  border: solid white 0.75px;
+  border-radius: 5px;
+  height: 200px;
+}
+
+.email-sent-alert{
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.email-send-another{
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.email-send-another:hover{
+  cursor: pointer;
+}
+
+
+#submit-input{
+  background-color: transparent;
+  color: white;
+  border: solid white 0.75px;
+  border-radius: 5px;
+  height: 30px;
+  width: 80px;
+  transition: 0.5s;
+}
+
+#submit-input:hover{
+  filter: drop-shadow(0px 0px 3px #ffffffcf);
+  transition: 0.5s;
+}
+
+#email-title{
+  align-self: flex-start;
+}
+
+#message-title{
+  align-self: flex-start;
 }
 
 @supports (-webkit-touch-callout: none) {
