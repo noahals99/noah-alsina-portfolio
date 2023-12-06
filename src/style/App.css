@@ -84,6 +84,8 @@
 }
 
 #content-display-outer-container{
+  transition: 1s;
+  opacity: 0;
   display: none;
   width: 100vw;
   height: 100vw;
@@ -91,13 +93,18 @@
   overflow: auto;
 }
 
+#content-display-container::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 #logo-container{
-  margin-top: 110px;
+  margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 70%;
   min-width: 300px;
-  min-height: 500px;
+  max-width: 45%;
+  min-height: 400px;
   height: 500px;
   gap: 10px;
   justify-content: center;
@@ -129,6 +136,8 @@
   overflow-y: auto;
   overflow-x: hidden;
   flex-direction: column;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .logo{
@@ -205,6 +214,83 @@ html {
   
 body{
   margin-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-menu-container{
+  top: 5px;
+  left: 2vw;
+  position: fixed;
+  height: 5vh;
+  z-index: 100;
+  max-width: 800px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.762);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.selected-bar{
+  height: 0.5px;
+  width: 100%;
+  background-color: white;
+}
+
+#project-section{
+  width: 100%;
+}
+
+.nav-item-conatiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#project-card-conatiner{
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-link{
+  text-decoration: none;
+  width: 100%;
+}
+
+.project-card{
+  border: solid white 0.75px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.project-title{
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.project-description{
+  font-size: 0.8rem;
+  color: white;
+}
+
+#project-section{
+  min-height: 700px;
+}
+
+.project-gh-link-icon{
+  transition: 0.5s;
+  height: 50px;
+}
+
+.project-gh-link-icon:hover{
+  filter:drop-shadow(0px 0px 4px #ffffff91);
+  transition: 0.5s;
 }
 
 @supports (-webkit-touch-callout: none) {

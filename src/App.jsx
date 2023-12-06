@@ -31,8 +31,9 @@ function App() {
   const introContainerRef = useRef();
 
   const beginHandle = () => {
-    portfolioSheet.project.ready.then(() => portfolioSheet.sequence.play({ iterationCount: 1, range: [0,10]}));
-    console.log("test")
+    function handelingFunction(){
+      portfolioSheet.project.ready.then(() => portfolioSheet.sequence.play({ iterationCount: 1, range: [0,10]}));
+    }
     enterButton.current.style.opacity = 0;
     introContainerRef.current.style.opacity = 0;
     setTimeout(() => {
@@ -46,7 +47,10 @@ function App() {
 
     setTimeout(() => {
       contentDisplay.current.style.opacity = 1;
-    }, 8010)
+    }, 7010)
+
+    setTimeout(handelingFunction,400);
+    
   }
   useEffect(() => {
     initialBlackscreen.current.style.opacity = 0;
