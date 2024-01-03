@@ -121,7 +121,7 @@ function ContentDisplay(){
                 <div id="project-section" ref={projectSectionRef}>
                     <p className="section-title" ref={projectRef}>Projects</p>
                     <div id="project-card-conatiner">
-                        <ProjectDisplay title="Earring online storefront" description="Online storefront for my partners earring business." githubUrl="https://github.com/noahals99/jaspers-earrings" url="https://jaspers-earrings.netlify.app/"/>
+                        <ProjectDisplay title="Jasper's Earrings" description="Online storefront for my partners earring business." githubUrl="https://github.com/noahals99/jaspers-earrings" url="https://jaspers-earrings.netlify.app/"/>
                     </div>
                     
                 </div>
